@@ -125,9 +125,9 @@ local function spawn(path, port, mode, callback)
       server_stdout:close()
       server_stderr:close()
       -- try again at port + 1
-      vim.defer_fn(function()
-        spawn(path, port + 1, mode, callback)
-      end, 0)
+      -- vim.defer_fn(function()
+      --   spawn(path, port + 1, mode, callback)
+      -- end, 0)
       return
     end
 
